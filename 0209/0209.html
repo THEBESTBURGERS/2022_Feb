@@ -1,0 +1,182 @@
+<!-- 정적 그리드 시스템 -->
+<!-- <html lang="en">
+<head>
+  <title>Static Grid System</title>
+  <style>
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+    .row {
+      overflow: hidden;
+    }
+    .span1, .span2, .span3, .span4, .span5,
+    .span6, .span7, .span8, .span9, .span10,
+    .span11, .span12 {
+      float: left;
+      /* GutterWidth를 기반으로 구성 */
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    /* ColumnWidth를 기반으로 구성 */
+    .span1 { width: 60px; }
+    .span2 { width: 140px; }
+    .span3 { width: 220px; }
+    .span4 { width: 300px; }
+    .span5 { width: 380px; }
+    .span6 { width: 460px; }
+    .span7 { width: 540px; }
+    .span8 { width: 62px; }
+    .span9 { width: 700px; }
+    .span10 { width: 780px; }
+    .span11 { width: 860px; }
+    .span12 { width: 940px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span6">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+      <div class="span6">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+      <div class="span3">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+      <div class="span3">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+      <div class="span3">
+        <h1>Lorem ipsum dolor sit maet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem consequatur eaque! Laborum minus, expedita ipsum minima quo nihil repellendus rerum asperiores, natus veniam nesciunt repudiandae eius non nostrum veritatis.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+<!-- 동적 그리드 시스템 -->
+<!-- <html lang="en">
+<head>
+  <title>CSS3 Grid System</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template: 200px 200px 200px / 200px 200px 200px;
+      grid-gap: 10px;
+    }
+    [class*=cell] {
+      box-sizing: border-box;
+      border: 5px solid black;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .cell-a {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cell-a">cell a</div>
+    <div class="cell-b">cell b</div>
+    <div class="cell-c">cell c</div>
+    <div class="cell-d">cell d</div>
+  </div>
+</body>
+</html> -->
+
+
+<!-- 웹 페이지 기본 구성 -->
+<html lang="en">
+<head>
+  <title>CSS3 Grid System</title>
+  <style>
+    * {
+      margin: 0; padding: 0;    
+    }
+    .container {
+      /* 기본 초기화 */
+      width: 960px;
+      margin: 0 auto;
+
+      /* 그리드 구성 */
+      display: grid;
+      grid-template: 70px 1fr 70px /200px 1fr;
+      grid-gap: 5px;
+      grid-template-areas:
+        'header header'
+        'aside content'
+        'footer footer';
+    }
+
+    [class*=cell] {
+      box-sizing: border-box;
+      border: 5px solid black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .cell-header { grid-column: header ; }
+    .cell-aside { grid-column: aside ; }
+    .cell-content { grid-column: content ; }
+    .cell-footer { grid-column: footer ; }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cell-header">
+      <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+    <div class="cell-aide">
+      <h2>Aside</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloremque perspiciatis cupiditate eum illum quibusdam ipsum doloribus, nisi dolore at sunt reiciendis nam totam! Porro unde voluptates distinctio natus non!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloremque perspiciatis cupiditate eum illum quibusdam ipsum doloribus, nisi dolore at sunt reiciendis nam totam! Porro unde voluptates distinctio natus non!</p>
+    </div>
+    <div class="cell-container">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloremque perspiciatis cupiditate eum illum quibusdam ipsum doloribus, nisi dolore at sunt reiciendis nam totam! Porro unde voluptates distinctio natus non!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloremque perspiciatis cupiditate eum illum quibusdam ipsum doloribus, nisi dolore at sunt reiciendis nam totam! Porro unde voluptates distinctio natus non!</p>
+    </div>
+    <div class="cell-footer">
+      <h1>Footer</h1>
+    </div>
+  </div>
+</body>
+
+
+<!-- 연습문제 -->
+1. Grid
+2. 12가 2, 3, 4, 6 등 다양한 수로 나누어지기 때문
+3. 1
