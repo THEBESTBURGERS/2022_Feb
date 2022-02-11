@@ -1,0 +1,85 @@
+/* 1번 */
+grid-column-start: 3;
+
+/* 2번 */
+grid-column-start: 5;
+
+/* 3번 */
+grid-column-end: 4;
+
+/* 4번 */
+grid-column-end: 2;
+
+/* 5번 */
+grid-column-end: -2;
+
+/* 6번 */
+grid-column: -3;
+
+/* 7번 */
+grid-column-end: span 2;
+
+/* 8번 */
+grid-column-end: span 5;
+
+/* 9번 */
+grid-column-start: span 3;
+
+/* 10번 */
+grid-column: 4 / 6;
+
+/* 11번 */
+grid-column: 2 / span 3;
+
+/* 12번 */
+grid-row-start: 3;
+
+/* 13번 */
+grid-row: 3 / span 3;
+
+/* 14번 */
+grid-column: 2;
+grid-row: 5;
+
+/* 15번 */
+grid-column: 2 / span 4;
+grid-row: 1 / span 5;
+
+/* 16번 */
+grid-area: 1 / 2 / span 3 / span 4;
+
+/* 17번 */
+grid-area: 2 / 3 / span 3 / span 3;
+
+/* 18번 */
+order: 5;
+
+/* 19번 */
+order: -1;
+
+/* 20번 */
+grid-template-columns: 50% 50%;
+
+/* 21번 */
+grid-template-columns: repeat(8, auto); 
+
+/* 22번 */
+grid-template-columns: 100px 3em 40% auto;
+
+/* 23번 */
+grid-template-columns: 1fr 5fr;
+
+/* 24번 */
+grid-template-columns: 50px auto auto auto 50px;
+
+/* 25번 */
+grid-template-columns: 75px 3fr 2fr;
+
+/* 26번 */
+grid-template-rows: repeat(4, 12.5px) auto;
+
+/* 27번 */
+grid-template: 60% 40% / 200px auto;
+
+/* 28번 */
+grid-template: auto 50px / 20% auto;
