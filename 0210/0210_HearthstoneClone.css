@@ -27,7 +27,6 @@ ul { list-style: none; }
   overflow: hidden;
   float: left;
 }
-
 #top_navbar > .right_item > span > a{
   overflow: hidden;
   float: right;
