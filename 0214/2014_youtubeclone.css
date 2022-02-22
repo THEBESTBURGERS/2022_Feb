@@ -26,6 +26,7 @@ p{
 
 #main_mp4_player > video {
   width: 100%;
+  max-width: 1000px;
 }
 
 
